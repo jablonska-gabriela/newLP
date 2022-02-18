@@ -46,9 +46,7 @@
             a {
                 padding: .75em 1em;
                 display: block;
-                &:hover {
-                    background: rgb(138, 133, 128);
-                }
+                width: 100%;
             }
         }
     }
@@ -125,11 +123,11 @@
             padding-bottom: 30px;
         }
         to {
-            padding-bottom: 00px;
+            padding-bottom: 0px;
         }
     }
     
-    @media only screen and (min-width: 680px) {
+    @media only screen and (min-width: 920px) {
         a {
             text-decoration: none;
             font-size: 1.3rem;
@@ -137,5 +135,91 @@
         .wrapper {
             display: flex;
             justify-content: space-between;
+        }
+        nav {
+            background: none;
+            transform: translateX(0%);
+            position: unset;
+            display: flex;
+            height: auto;
+            width: auto;
+            background: none;
+            svg.close {
+                display: none;
+            }
+            ul {
+                display: flex;
+                margin: 0;
+            }
+        }
+        a {
+            color: white;
+            padding: .5em 1.5em;
+            font-size: 18px;
+            background: none;
+            &:hover {
+                background: none;
+                text-decoration: underline;
+            }
+        }
+        .menu {
+            display: none;
+        }
+        .logo {
+            color: black;
+            span {
+                color: red;
+            }
+        }
+        .hero-img {
+            width: 50%;
+            left: unset;
+            right: 0;
+            height: 42em;
+        }
+        section.hero {
+            color: black;
+            height: auto;
+            width: 40%;
+            margin-bottom: 260px;
+            .subhead {
+                margin-bottom: 3em;
+                font-size: 24px;
+            }
+            .hero-title {
+                font-weight: bold;
+            }
+            svg.down-arrow {
+                stroke: black;
+                position: absolute;
+                bottom: 3em;
+                path {
+                    fill: black;
+                }
+            }
+        }
+        .feature {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 3em;
+            margin-bottom: 8em;
+            img {
+                width: 25em;
+            }
+            .content {
+                text-align: right;
+            }
+        }
+        .feature-left {
+            grid-template-areas: 'left right';
+            img {
+                grid-area: left;
+            }
+            .content {
+                text-align: left;
+            }
+        }
+        section.more-info {
+            padding: 30px 200px;
         }
     }
